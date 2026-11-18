@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 18: Mini Project - Accessible Student Admission Page</title>
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif; 
+            margin: 0;
+            background: #fff;
+        }
+        .page {
+            border: 1px solid #aaa;
+            max-width: 680px;
+            margin: 20px auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        header {
+            background: #1a1a7a;
+            color: #fff;
+            text-align: center;
+            padding: 25px;
+        }
+        header h1 { margin: 0; font-size: 26px; }
+        main { padding: 10px 40px; }
+        h2 { font-size: 22px; margin-top: 20px; }
+        table {
+            border-collapse: collapse;
+            width: 390px;
+            margin: 0 auto 20px auto;
+            font-size: 14px;
+        }
+        caption { font-size: 14px; caption-side: top; margin-bottom: 4px; }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 5px 8px;
+            text-align: left;
+        }
+        th { background: #e8ecf8; text-align: center; }
+        fieldset {
+            width: 340px;
+            border: 1px solid #666;
+            padding: 10px 12px 15px 12px;
+            margin: 0 auto;
+        }
+        legend { font-size: 14px; }
+        label { display: block; font-size: 14px; margin-top: 10px; }
+        input, select, textarea {
+            font-family: inherit;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        input[type="text"], input[type="email"] { width: 180px; }
+        textarea { width: 320px; height: 50px; }
+        button { margin-top: 18px; padding: 5px 10px; font-size: 14px; }
+        footer {
+            background: #1a1a7a;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <header>
+        <h1>ABC College Admission 2026</h1>
+    </header>
+
+    <main>
+        <h2>Courses and Fees</h2>
+
+        <table>
+            <caption>Available Courses</caption>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Seats</th>
+                    <th>Fees</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B.Tech CSE</td>
+                    <td>120</td>
+                    <td>&#8377;90,000</td>
+                </tr>
+                <tr>
+                    <td>BCA</td>
+                    <td>60</td>
+                    <td>&#8377;45,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form method="POST" action="submit.php">
+            <fieldset>
+                <legend>Application Form</legend>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="course">Course:</label>
+                <select id="course" name="course">
+                    <option value="btech">B.Tech CSE</option>
+                    <option value="bca">BCA</option>
+                </select>
+
+                <label for="statement">Statement:</label>
+                <textarea id="statement" name="statement"></textarea>
+
+                <button type="submit">Apply</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2026 ABC College
+    </footer>
+
+</div>
+
+</body>
+</html>
